@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.header {
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header h1{
+    font-size: 2rem;
+}
+
+.createBookButton {
+    background-color: #28a745; /* Verde brillante */
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.createBookButton:hover {
+    background-color: #218838; /* Verde más oscuro */
+}
+
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.book-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background-color: white;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 200px;
+    transition: transform 0.2s;
+}
+
+.book-card:hover {
+    transform: scale(1.05);
+}
+
+.book-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+.book-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+}
+
+.title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #343a40;
+    flex-wrap: 1;
+}
+
+.author {
+    font-size: 1em;
+    color: #6c757d;
+}
+
+.pages, .isRead {
+    font-size: 0.9em;
+    color: #6c757d;
+}
+
+.book-card .price {
+    font-size: 1.2em;
+    color: #28a745;
+    font-weight: bold;
+}
+
+.buttonsContainer{
+    display: flex;
+    /* justify-content: center; */
+    gap: 25px;
+}
+
+.status-button {
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+    flex-grow: 1;
+    width: 40px;
+    /* display: inline-block; */
+
+}
+
+.status-button.read {
+    background-color: #28a745; /* Verde para libros leídos */
+}
+
+.status-button:hover {
+    background-color: #357ab8;
+}
+
+.status-button.read:hover {
+    background-color: #218838; /* Verde más oscuro para libros leídos */
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 10px;
+    text-align: center;
+    transition: background-color 0.3s;
+    flex-grow: 1;
+    width: 40px;
+}
+
+.delete-button:hover {
+    background-color: #c0392b;
+}
+
+.dialog {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-content {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 350px;
+    border-radius: 8px;
+    gap: 15px;
+}
+.dialog-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.close-button {
+    color: #aaa;
+    position: relative;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#bookForm{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#bookForm label {
+    display: block;
+}
+
+#bookForm label[for="isRead"] {
+    display: inline;
+}
+
+#bookForm input[type="text"],
+#bookForm input[type="number"] {
+    /* width: 100%; */
+    display: block;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.check-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+
+#bookForm button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+#bookForm button:hover {
+    background-color: #357ab8;
+}
